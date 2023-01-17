@@ -26,9 +26,13 @@ const images = [
 let slide = document.getElementById("slide");
 const btn1 = document.getElementById("slide-arrow-prev");
 const btn2 = document.getElementById("slide-arrow-next");
+const title = document.getElementById("title");
+const text = document.getElementById("text");
 
 let i = 0;
 slide.src = images[i]["image"];
+title.innerHTML = images[i]["title"];
+text.innerHTML = images[i]["text"];
 
 
 btn2.onclick = function(){
@@ -37,6 +41,8 @@ btn2.onclick = function(){
       i = 0;
     }
     slide.src = images[i]["image"];
+    title.innerHTML = images[i]["title"];
+    text.innerHTML = images[i]["text"];
 };
   
 btn1.onclick = function(){
@@ -45,4 +51,6 @@ btn1.onclick = function(){
       i = images.length - 1;
     }
     slide.src = images[i]["image"];
+    title.innerHTML = images[i]["title"];
+    text.innerHTML = images[i]["text"];
 };
