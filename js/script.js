@@ -28,6 +28,7 @@ const btn1 = document.getElementById("slide-arrow-prev");
 const btn2 = document.getElementById("slide-arrow-next");
 const title = document.getElementById("title");
 const text = document.getElementById("text");
+const tumb = document.getElementById("anteprima");
 
 let i = 0;
 slide.src = images[i]["image"];
@@ -54,3 +55,9 @@ btn1.onclick = function(){
     title.innerHTML = images[i]["title"];
     text.innerHTML = images[i]["text"];
 };
+
+for(let i = 0; i < 5; i++){
+    tumb.innerHTML += `<div class="tumb">
+                            <img src="${images[i]["image"]}" class="tumb-img">
+                        </div>`;
+}
